@@ -13,12 +13,12 @@ resilience4j:
     instances:
       userService:
         register-health-indicator: true
-        sliding-Window-Size: 10
-        failure-Rate-Threshold: 50
-        minimum-Number-Of-Calls: 5
-        wait-Duration-In-Open-State: 10s
-        permitted-Number-Of-Calls-In-Half-Open-State: 3
-        automatic-Transition-From-Open-To-Half-Open-Enabled: true
+        sliding-window-size: 10
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 5
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 3
+        automatic-transition-from-open-to-half-open-enabled: true
 
 management:
   endpoints:
