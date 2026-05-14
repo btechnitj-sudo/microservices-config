@@ -5,4 +5,38 @@ spring:
   datasource:                   
     url: jdbc:mysql://localhost:3306/hotel_user   
     username: root              
-    password: 1234              
+    password: 1234    
+
+resilience4j:
+
+  circuitbreaker:
+    instances:
+      userService:
+        register-health-indicator: true
+        sliding-Window-Size: 10
+        failure-Rate-Threshold: 50
+        minimum-Number-Of-Calls: 5
+        wait-Duration-In-Open-State: 10s
+        permitted-Number-Of-Calls-In-Half-Open-State: 3
+        automatic-Transition-From-Open-To-Half-Open-Enabled: true
+#actutator
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - circuitbreakers
+          - circuitbreakerevents
+
+
+  health:
+    circuitbreakers:
+      enabled: true
+
+  endpoint:
+    health:
+      show-details: always
+
+
+
