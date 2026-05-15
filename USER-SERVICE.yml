@@ -27,9 +27,9 @@ resilience4j:
   ratelimiter:
    instances:
     userService:
-     limit-for-period: 2
+     limit-for-period: 4
      limit-refresh-period: 10s
-     timeout-duration: 0s
+     timeout-duration: 2s
      
 management:
   endpoints:
