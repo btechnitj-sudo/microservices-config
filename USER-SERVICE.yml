@@ -24,12 +24,18 @@ resilience4j:
     userService:
      max-attempts: 3
      wait-duration: 2s
+  ratelimiter:
+   instances:
+    userService:
+     limit-for-period: 2
+     limit-refresh-period: 10s
+     timeout-duration: 0s
      
 management:
   endpoints:
     web:
       exposure:
-        include:  "health,circuitbreakers,circuitbreakerevents,retries,retryevents"
+        include:  "health,circuitbreakers,circuitbreakerevents,retries,retryevents,ratelimiters,ratelimiterevents"
        
           
 
