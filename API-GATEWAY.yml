@@ -36,7 +36,12 @@ spring:
               uri: lb://HOTEL-SERVICE
               predicates:
                 - Path=/hotels/**
+              filters:
+                - TokenRelay=
+              
             - id: rating-service
               uri: lb://RATING-SERVICE
               predicates:
                 - Path=/ratings/**
+              filters:
+                - TokenRelay=
