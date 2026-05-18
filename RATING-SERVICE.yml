@@ -5,3 +5,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/ratings
+  security:       
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-inejhxufj1vndb4r.uk.auth0.com/
