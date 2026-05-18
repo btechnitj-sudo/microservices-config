@@ -10,6 +10,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
+          issuer-uri: https://dev-inejhxufj1vndb4r.uk.auth0.com/
           jwk-set-uri: https://dev-inejhxufj1vndb4r.uk.auth0.com/.well-known/jwks.json
 resilience4j:
 
