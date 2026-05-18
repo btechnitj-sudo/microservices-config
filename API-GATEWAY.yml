@@ -8,8 +8,8 @@ spring:
       client:
         registration:
           auth0:
-            client-id: dGZvv8vkTqWK4tpsW3DJMOJ3g52Hvj75
-            client-secret: 17zkWGGZ7SDJ1ir-bykszped1jkkuOW2ZZqzZw5yr-yBiI0v3n55fftv3RcsYp7P
+            client-id: ${AUTH0_CLIENT_ID}
+            client-secret: ${AUTH0_CLIENT_SECRET}
             scope: openid, profile, email, offline_access
             authorization-grant-type: authorization_code
             redirect-uri: "http://localhost:8083/login/oauth2/code/auth0"
